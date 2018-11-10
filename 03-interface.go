@@ -27,8 +27,9 @@ func (c *cat) makeNoise() {
 }
 
 func main() {
-	// c := &cat{}; sayIt(c)
 	sayIt(&cat {})
+	// Or:   c := &cat{}; sayIt(c)
+	// Or:   c := cat{}; sayIt(&c)
 	
 	sayIt(&dog {})
 }
