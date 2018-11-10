@@ -2,14 +2,14 @@ package main
 
 import "fmt"
 
-// Definition of behavior: any struct where makeNoise() can be done on it,
+// Definition of behavior: any struct where makeNoise() can be called for,
 // is a noiseMaker
 type noiseMaker interface {
 	// func keyword is implicit here
 	makeNoise()
 }
 
-// Types can be specified as an interface
+// Types can be specified as an interface as in argument n
 func sayIt(n noiseMaker) {
 	n.makeNoise()
 }
