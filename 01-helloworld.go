@@ -2,7 +2,8 @@ package main
 
 import "fmt"
 
-// func add(a int, b int) int { ... }
+// Lowercase 'a' in 'add': won't get exported out of this package
+// Combined argument type: func add(a int, b int) int { ... }
 func add(a, b int) int {
 	return a + b
 }
