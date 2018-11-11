@@ -7,18 +7,17 @@ import "fmt"
 // }
 
 type divideByZeroError struct {
-	numerator, denominator int
+	numerator int
 }
 
 func newDivideByZeroError(a, b int) *divideByZeroError {
 	return &divideByZeroError{
 		numerator: a,
-		denominator: b,
 	}
 }
 
 func (d *divideByZeroError) Error() string {
-	return fmt.Sprintf("cannot divide %d by %d: denominator is zero", d.numerator, d.denominator)
+	return fmt.Sprintf("cannot divide %d by 0", d.numerator)
 }
 
 func divide(a, b int) (int, error) {
